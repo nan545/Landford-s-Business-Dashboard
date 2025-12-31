@@ -1,4 +1,4 @@
- Business Dashboard Web App (Vanilla JavaScript)
+ Business Dashboard Web App 
 
 A responsive **Business Dashboard Web Application** built using **HTML, CSS, and Vanilla JavaScript**.  
 The app includes **mock authentication**, **client management (CRUD)**, **analytics with Chart.js**, **search & filter**, and **localStorage persistence** — all without any frameworks.
