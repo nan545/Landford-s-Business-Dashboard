@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <header>
+    <h1>Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <section class="stats">
+    <div class="stat">Total Clients: <span id="totalClients">0</span></div>
+    <div class="stat">Active Clients: <span id="activeClients">0</span></div>
+  </section>
+
+  <section class="charts">
+  <div class="chart-card">
+    <canvas id="statusChart"></canvas>
+  </div>
+
+  <div class="chart-card">
+    <canvas id="activeChart"></canvas>
+  </div>
+</section>
+
+
+  <section class="controls">
+    <input type="text" id="search" placeholder="Search clients...">
+    <button onclick="openForm()">+ Add Client</button>
+  </section>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="clientTable"></tbody>
+  </table>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <form id="clientForm" class="card">
+      <input type="hidden" id="clientId">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <select id="status">
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+      </select>
+      <button type="submit">Save</button>
+      <button type="button" onclick="closeForm()">Cancel</button>
+    </form>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/clients.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
